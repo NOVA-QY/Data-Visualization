@@ -19,10 +19,18 @@ print("Total repositories:",response_dict['total_count'])
 #探索有关仓库的信息
 repo_dicts=response_dict['items']
 
-names,stars=[],[]
+names,plot_dicts=[],[]
 for repo_dict in repo_dicts:
     names.append(repo_dict['name'])
-    stars.append(repo_dict['stargazers_count'])
+    # stars.append(repo_dict['stargazers_count'])
+
+    #根据数据绘图，返回完整信息
+    plot_dict={
+        'value':repo_dict['stargazers_count'],
+        'label':repo_dict['description'],
+        'xlink':repo_dict['html_url'],      #为图表添加链接
+    }
+    plot_dicts.append(plot_dict)
 
 #可视化
 my_style=LS('#333366',base_style=LCS)       #定义一种样式，将基色设置为深蓝色
@@ -46,7 +54,7 @@ chart=pygal.Bar(my_config,style=my_style)
 chart.title='Most-starred Python Projects on Github'
 chart.x_labels=names
 
-chart.add('',stars)
+chart.add('',plot_dicts)
 chart.render_to_file('python_repos.svg')
 
 ''' print("Repositories returned:",len(repo_dicts))
