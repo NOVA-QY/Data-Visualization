@@ -19,6 +19,7 @@
 	},
 ***
 **设置图表的外观Config实例**
+
 	x_label_rotation	标签绕x轴的旋转角度  
 	show_legend		隐藏图例  
 	title_font_size		标题大小  
