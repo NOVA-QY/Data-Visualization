@@ -3,9 +3,9 @@
 		
 ## 涉及到的库:
 
-	* matplotlib
-	* pygal
-	* requests
+	1. matplotlib
+	2. pygal
+	3. requests
 
 
 
