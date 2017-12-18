@@ -2,6 +2,10 @@
 import requests
 
 #执行API调用并存储响应
+''' 
+    r                   响应对象
+    status_code         响应对象包含的状态码：200代表成功
+ '''
 url='https://api.github.com/search/repositories?q=language:python&sort=stars'
 r=requests.get(url)
 print("Status code:",r.status_code)
@@ -16,9 +20,20 @@ print("Repositories returned:",len(repo_dicts))
 
 #研究第一个仓库
 repo_dict=repo_dicts[0]
-print("\nKeys:",len(repo_dict))
+''' print("\nKeys:",len(repo_dict))
 for key in sorted(repo_dict.keys()):
-    print(key)
+    print(key) '''
+
+    #概述最受欢迎的仓库
+print("\nSelected information about each repository:")
+for repo_dict in repo_dicts:
+    print("Name:",repo_dict['name'])
+    print("Owner:",repo_dict['owner']['login'])
+    print("Stars:",repo_dict['stargazers_count'])
+    print("Repository:",repo_dict['html_url'])
+    ''' print("Created:",repo_dict['created_at'])
+    print("Updated:",repo_dict['updated_at']) '''
+    print("Description:",repo_dict['description'])
 
 #处理结果
 print(response_dict.keys())
