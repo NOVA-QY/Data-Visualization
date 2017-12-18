@@ -5,8 +5,8 @@
         search/repositories		让API搜索Github上的所有仓库  
         ?				表示要传递一个实参  
         q=				表示开始指定查询  
-        &sort=stars			指定将项目按照获得的星级进行排序  
-
+        &sort=stars			指定将项目按照获得的星级进行排序  
+***
 ###监视API的速率限制
         在浏览器中输入https://api.github.com/rate_limit
         显示:  
