@@ -15,5 +15,16 @@
 	"search": {			搜索API的速率限制  
 	"limit": 10,		每分钟10个请求限制  
 	"remaining": 10,		所剩配额  
-	"reset": 15135669861	将配额重置的Unix时间  
+	"reset": 15135669861	将配额重置的Unix时间  
 	},
+***
+**设置图表的外观Config实例**
+	x_label_rotation	标签绕x轴的旋转角度  
+	show_legend		隐藏图例  
+	title_font_size		标题大小  
+	label_font_size		标签大小  
+	major_font_size		主标签大小  
+	truncate_label		将较长的项目名缩短为的长度  
+	show_y_guides		水平线显示（隐藏）  
+	width			宽度  
+***
