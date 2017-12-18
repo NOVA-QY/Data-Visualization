@@ -8,10 +8,10 @@
         &sort=stars			指定将项目按照获得的星级进行排序  
 ***
 ###监视API的速率限制
-        在浏览器中输入https://api.github.com/rate_limit
-        显示:  
-        "search": {			搜索API的速率限制  
-              "limit": 10,		每分钟10个请求限制  
-              "remaining": 10,		所剩配额  
-              "reset": 15135669861	将配额重置的Unix时间  
-            },  
+                在浏览器中输入https://api.github.com/rate_limit
+                显示:  
+                "search": {			搜索API的速率限制  
+                "limit": 10,		每分钟10个请求限制  
+                "remaining": 10,		所剩配额  
+                "reset": 15135669861	将配额重置的Unix时间  
+                },  
